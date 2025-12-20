@@ -24,7 +24,7 @@ import utils
 
 def check_directory(dir):
     if not os.path.exists(dir):
-        sys.exit("Error: {} directory does not exist".format(dir))
+        raise FileNotFoundError("Error: {} directory does not exist".format(dir))
 
 
 class TextToMel:
