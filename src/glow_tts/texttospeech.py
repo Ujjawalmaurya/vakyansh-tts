@@ -102,7 +102,7 @@ class MelToWav:
 
         assert os.path.isfile(checkpoint_path)
         print("Loading '{}'".format(checkpoint_path))
-        state_dict_g = torch.load(checkpoint_path, map_location=self.device)
+        state_dict_g = torch.load(checkpoint_path, map_location=self.device, weights_only=False)
         print("Complete.")
 
         generator.load_state_dict(state_dict_g["generator"])

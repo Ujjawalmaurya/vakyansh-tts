@@ -568,7 +568,7 @@ class XlitPiston:
         )
         self.model = Seq2Seq(enc, dec, pass_enc2dec_hid=enc2dec_hid, device=self.device)
         self.model = self.model.to(self.device)
-        weights = torch.load(weight_path, map_location=torch.device(self.device))
+        weights = torch.load(weight_path, map_location=torch.device(self.device), weights_only=False)
 
         self.model.load_state_dict(weights)
         self.model.eval()

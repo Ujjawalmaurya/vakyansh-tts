@@ -130,3 +130,23 @@ dmypy.json
 .pyre/
 
 .idea/
+
+# Large model files and weights
+*.pth
+*.pth.tar
+*.ckpt
+*.bin
+*.h5
+*events.out.tfevents*
+do_*
+g_0*
+
+# Large JSON datasets (transliteration models)
+tts_infer/translit_models/**/*_words_*.json
+tts_infer/translit_models/**/*.zip
+
+# Project specific directories
+checkpoints/
+logs/
+results/
+data/
